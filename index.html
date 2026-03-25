@@ -211,6 +211,7 @@
             if (stats.energy >= 25) {
                 stats.energy -= 25; 
                 stats.mood = Math.min(100, stats.mood + 20); 
+                stats.hunger = Math.min(100, stats.hunger - 10); 
                 msg.innerText = "🧶 莉莉疯狂捕捉毛线球，展示猫科魅力！";
                 img.style.transform = 'rotate(-10deg)'; 
             } else {
