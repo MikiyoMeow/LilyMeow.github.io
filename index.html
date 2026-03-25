@@ -26,33 +26,74 @@
         /* ======================== 
            ✨ 新增：国际化导航栏样式
            ======================== */
+        .lang-bar {
+            width: 850px; /* 和下方的卡片对齐 */
+            max-width: 95vw;
+            display: flex;
+            justify-content: flex-end; /* 让语言按钮靠最右边显示，显得专业 */
+            gap: 10px;
+            margin-bottom: 12px; /* 和主导航栏拉开一点点小距离 */
+        }
+
+        /* 极致迷你的语言按钮 */
+        .lang-btn {
+            text-decoration: none;
+            color: #aaa; /* 默认颜色浅一点，不抢主页面的戏 */
+            font-size: 0.75rem; /* 【关键修改】：字号变得非常小巧 */
+            padding: 4px 12px; /* 内边距也缩小 */
+            border-radius: 12px;
+            border: 1px solid #ffe3e3;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            color: #ff6b81;
+            border-color: #ffb6c1;
+            transform: translateY(-2px); /* 悬浮稍微动一下 */
+        }
+
+        .lang-btn.active {
+            background: #ffe3e3;
+            color: #ff6b81;
+            border-color: #ffb6c1;
+            font-weight: bold;
+        }
+
+        /* ======================== 
+           回归纯粹的主导航栏
+           ======================== */
         .top-nav {
             display: flex; 
-            justify-content: space-between; /* 让菜单靠左，语言靠右 */
-            align-items: center;
+            justify-content: center; /* 恢复让“主页”和“相册”居中 */
+            gap: 20px; 
             margin-bottom: 25px; 
-            width: 850px; /* 和下方的卡片一样宽 */
-            max-width: 95vw;
+            width: 100%;
         }
         
-        .nav-group { display: flex; gap: 15px; } /* 分组容器 */
-
-        .nav-btn, .lang-btn {
-            text-decoration: none; font-weight: bold; 
-            border-radius: 25px; background: white; transition: all 0.2s; 
-            border: 2px solid #ffb6c1; box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+        .nav-btn {
+            text-decoration: none; 
+            color: #ff6b81; 
+            font-weight: bold; 
+            padding: 10px 25px; 
+            border-radius: 25px; 
+            background: white; 
+            transition: all 0.2s; 
+            border: 2px solid #ffb6c1;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
         }
         
-        /* 页面菜单按钮大一点 */
-        .nav-btn { color: #ff6b81; padding: 10px 25px; }
-        .nav-btn:hover { background: #fff0f2; transform: translateY(-3px); }
-        .nav-btn.active { background: #ff6b81; color: white; border-color: #ff6b81; }
-
-        /* 语言切换按钮小一点 */
-        .lang-btn { color: #aaa; padding: 6px 15px; font-size: 0.9rem; border-color: #ffe3e3; }
-        .lang-btn:hover { color: #ff6b81; border-color: #ffb6c1; transform: translateY(-2px); }
-        .lang-btn.active { background: #ffe3e3; color: #ff6b81; border-color: #ffb6c1; }
-
+        .nav-btn:hover { 
+            background: #fff0f2; 
+            transform: translateY(-3px); 
+        }
+        
+        .nav-btn.active { 
+            background: #ff6b81; 
+            color: white; 
+            border-color: #ff6b81; 
+            box-shadow: 0 6px 15px rgba(255,107,129,0.4); 
+        }
         
 
         /* ======================== 
@@ -108,21 +149,19 @@
 <body>
 
 
+<div class="lang-bar">
+    <a href="index.html" class="lang-btn active">中文</a>
+    <a href="index_en.html" class="lang-btn">EN</a>
+    <a href="index_ja.html" class="lang-btn">日本語</a>
+</div>
+
 <div class="top-nav">
-    
-    <div class="nav-group">
-        <a href="index.html" class="lang-btn active">中文</a>
-        <a href="index_en.html" class="lang-btn">EN</a>
-        <a href="index_ja.html" class="lang-btn">日本語</a>
-    </div>
-
-
-    <div class="nav-group">
     <a href="index.html" class="nav-btn active">🏠 莉莉主页</a>
     <a href="gallery.html" class="nav-btn">📷 秘密相册</a>
-    </div>
-    
 </div>
+    
+
+
 
 <div class="card">
     <div class="layout-container">
