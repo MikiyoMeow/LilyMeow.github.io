@@ -109,11 +109,36 @@
         .rpg-info { display: flex; justify-content: space-between; font-weight: bold; font-size: 0.85rem; margin-bottom: 6px; color: #777; }
         .rpg-bar-bg { background: #eee; height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid #e0e0e0; }
         .rpg-bar-fill { height: 100%; background: linear-gradient(90deg, #ff9a9e 0%, #ff6b81 100%); border-radius: 4px; }
+
+        /* ======================== 
+           4. 顶部导航菜单
+           ======================== */
+        .nav-menu {
+            display: flex; justify-content: center; gap: 15px; 
+            margin-bottom: 25px; padding-bottom: 20px; 
+            border-bottom: 2px dashed #ffe3e3; width: 100%;
+        }
+        .nav-btn {
+            text-decoration: none; color: #ff6b81; font-weight: bold; 
+            padding: 8px 20px; border-radius: 20px; 
+            background: #fff0f2; transition: all 0.2s; border: 1px solid #ffb6c1;
+        }
+        .nav-btn:hover { background: #ffb6c1; color: white; transform: translateY(-2px); }
+        .nav-btn.active { background: #ff6b81; color: white; border-color: #ff6b81; box-shadow: 0 4px 8px rgba(255,107,129,0.3); }
+        
     </style>
+    
 </head>
 <body>
 
 <div class="card">
+
+    <div class="nav-menu">
+        <a href="index.html" class="nav-btn active">🏠 莉莉主页</a>
+        <a href="gallery.html" class="nav-btn">📷 秘密相册</a>
+    <div class="layout-container">
+
+    
     <div class="layout-container">
         
         <div class="left-panel">
